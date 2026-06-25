@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:controller="com.univalle.sudoku.controller.SudokuController"
+            xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            styleClass="root-pane">
+    <top>
+        <VBox spacing="10" styleClass="header-box">
+            <padding>
+                <Insets top="24" right="24" bottom="18" left="24"/>
+            </padding>
+            <Label text="Sudoku 6x6" styleClass="title-label"/>
+            <Label text="Completa los numeros del 1 al 6. Cada fila, columna y bloque 2x3 debe ser unico."
+                   styleClass="subtitle-label"/>
+        </VBox>
+    </top>
+
+    <center>
+        <VBox alignment="CENTER" spacing="16" styleClass="center-box">
+            <padding>
+                <Insets top="10" right="24" bottom="14" left="24"/>
+            </padding>
+            <GridPane fx:id="boardGrid" styleClass="board-grid" prefWidth="520" prefHeight="520"/>
+            <Label fx:id="statusLabel" text="Bienvenido a Sudoku 6x6" styleClass="status-label"/>
+        </VBox>
+    </center>
+
+    <bottom>
+        <HBox alignment="CENTER" spacing="12" styleClass="toolbar-box">
+            <padding>
+                <Insets top="12" right="24" bottom="24" left="24"/>
+            </padding>
+            <Button fx:id="newGameButton" text="Nuevo juego" styleClass="action-button"/>
+            <Button fx:id="helpButton" text="Pista" styleClass="help-button"/>
+            <Button fx:id="checkButton" text="Comprobar" styleClass="action-button"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Label text="Bloques: 2x3" styleClass="block-note"/>
+        </HBox>
+    </bottom>
+</BorderPane>

@@ -1,0 +1,134 @@
+.root-pane {
+    -fx-background-color: linear-gradient(to bottom right, #f4fbf8 0%, #e9f4ff 55%, #fef8e7 100%);
+    -fx-font-family: "Segoe UI", "Verdana", sans-serif;
+}
+
+.header-box {
+    -fx-background-color: rgba(255, 255, 255, 0.70);
+    -fx-border-color: rgba(30, 72, 101, 0.16);
+    -fx-border-width: 0 0 1 0;
+}
+
+.title-label {
+    -fx-text-fill: #10324c;
+    -fx-font-size: 38px;
+    -fx-font-weight: 800;
+}
+
+.subtitle-label {
+    -fx-text-fill: #2d5f7a;
+    -fx-font-size: 14px;
+}
+
+.center-box {
+    -fx-background-color: transparent;
+}
+
+.board-grid {
+    -fx-background-color: rgba(255, 255, 255, 0.82);
+    -fx-padding: 8;
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+    -fx-border-color: rgba(16, 50, 76, 0.18);
+    -fx-border-width: 1;
+    -fx-effect: dropshadow(three-pass-box, rgba(9, 45, 80, 0.18), 18, 0.10, 0, 8);
+}
+
+.sudoku-cell {
+    -fx-alignment: center;
+    -fx-font-size: 30px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #1f2f42;
+    -fx-background-color: rgba(255, 255, 255, 0.95);
+    -fx-border-color: #a8c4d8;
+    -fx-border-width: 1;
+    -fx-pref-width: 76;
+    -fx-pref-height: 76;
+}
+
+.sudoku-cell:focused {
+    -fx-background-color: #fff7da;
+    -fx-border-color: #f09c37;
+    -fx-border-width: 2;
+}
+
+.sudoku-cell:fixed {
+    -fx-text-fill: #0f5f52;
+    -fx-background-color: #daf3ed;
+    -fx-font-weight: 900;
+}
+
+.sudoku-cell:invalid {
+    -fx-background-color: #ffe4e4;
+    -fx-border-color: #da2f2f;
+    -fx-border-width: 2;
+}
+
+.sudoku-cell:hinted {
+    -fx-background-color: #fff0c9;
+    -fx-border-color: #e29a27;
+    -fx-border-width: 2;
+}
+
+.block-left-border {
+    -fx-border-width: 1 1 1 2;
+}
+
+.block-top-border {
+    -fx-border-width: 2 1 1 1;
+}
+
+.block-right-border {
+    -fx-border-width: 1 2 1 1;
+}
+
+.block-bottom-border {
+    -fx-border-width: 1 1 2 1;
+}
+
+.status-label {
+    -fx-font-size: 15px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #1b4d6b;
+    -fx-background-color: rgba(255, 255, 255, 0.72);
+    -fx-background-radius: 12;
+    -fx-padding: 8 12;
+}
+
+.toolbar-box {
+    -fx-background-color: rgba(255, 255, 255, 0.74);
+    -fx-border-color: rgba(30, 72, 101, 0.16);
+    -fx-border-width: 1 0 0 0;
+}
+
+.action-button,
+.help-button {
+    -fx-font-size: 14px;
+    -fx-font-weight: 700;
+    -fx-text-fill: white;
+    -fx-background-radius: 10;
+    -fx-padding: 10 18;
+    -fx-cursor: hand;
+}
+
+.action-button {
+    -fx-background-color: linear-gradient(to bottom, #2b7ead, #1f6287);
+}
+
+.action-button:hover {
+    -fx-background-color: linear-gradient(to bottom, #3592c4, #256f98);
+}
+
+.help-button {
+    -fx-background-color: linear-gradient(to bottom, #f29a33, #d67d1d);
+}
+
+.help-button:hover {
+    -fx-background-color: linear-gradient(to bottom, #ffae4d, #e08a2a);
+}
+
+.block-note {
+    -fx-font-size: 13px;
+    -fx-text-fill: #496f86;
+    -fx-font-weight: 700;
+}
