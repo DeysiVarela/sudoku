@@ -1,63 +1,91 @@
 # Sudoku 6x6 - JavaFX MVC
 
-Mini project for a 6x6 Sudoku game built with Java 17+, JavaFX, and MVC.
+Proyecto educativo de Sudoku 6x6 implementado con JavaFX, patron MVC y documentacion Javadoc.
 
-## Features
+## Estado actual del proyecto
 
-- Dynamic 6x6 board generation on every app start.
-- Sudoku rules validation in real time (rows, columns, and 2x3 blocks).
-- Keyboard and mouse interaction for cell editing.
-- Fixed initial values (2 per 2x3 block), highlighted and non-editable.
-- Hint system that inserts a valid value into an empty editable cell.
-- Visual feedback for invalid cells and status messages.
+- Interfaz traducida al espanol.
+- Generacion dinamica del tablero 6x6 al iniciar o crear nuevo juego.
+- Validacion en tiempo real por fila, columna y bloque 2x3.
+- Celdas fijas (2 por bloque) resaltadas y no editables.
+- Sistema de pistas con insercion de un valor valido.
+- Mensajes de estado y realimentacion visual para conflictos.
 
-## Project Structure (MVC)
+## Arquitectura MVC implementada
 
-- `model`: game state, generator, hint logic, and validation.
-- `controller`: JavaFX event handling and UI orchestration.
-- `resources`: FXML view and CSS theme.
+- model: logica del juego, generador de tablero, validacion y pistas.
+- controller: manejo de eventos JavaFX e integracion UI-modelo.
+- resources (vista): FXML y estilos CSS.
 
-## Requirements
+Clases clave:
 
-- Java SE 17 or higher
-- Maven 3.9+
+- src/main/java/com/univalle/sudoku/model/SudokuBoard.java
+- src/main/java/com/univalle/sudoku/model/SudokuGenerator.java
+- src/main/java/com/univalle/sudoku/controller/SudokuController.java
+- src/main/resources/com/univalle/sudoku/sudoku-view.fxml
 
-## Run
+## Estructuras de datos usadas
+
+Ademas de arreglos y listas, se usan estructuras vistas en clase:
+
+- List / ArrayList
+- Set / HashSet / TreeSet
+- Map / HashMap
+- Queue / Deque (ArrayDeque)
+- PriorityQueue
+- Stack
+- Vector
+
+## Requisitos
+
+- Java 25 LTS
+- Maven 3.9+ (se recomienda usar Maven Wrapper del proyecto)
+
+## Ejecutar
+
+Windows PowerShell:
 
 ```bash
-mvn clean javafx:run
+.\mvnw.cmd clean javafx:run
 ```
 
-## Build
+Linux/macOS:
 
 ```bash
-mvn clean package
+./mvnw clean javafx:run
 ```
 
-## Generate Javadoc (English comments)
+## Compilar
+
+Windows:
 
 ```bash
-mvn javadoc:javadoc
+.\mvnw.cmd -DskipTests compile
 ```
 
-Output location:
-
-- `target/site/apidocs/index.html`
-
-## Suggested Git Workflow
+Linux/macOS:
 
 ```bash
-git init
-git add .
-git commit -m "Initial Sudoku 6x6 JavaFX MVC project"
-git branch -M main
-git remote add origin <your-repository-url>
-git push -u origin main
+./mvnw -DskipTests compile
 ```
 
-## User Stories Coverage Summary
+## Documentacion Javadoc
 
-- HU-1: Grid, dynamic puzzle, fixed highlighted cells, and clear controls.
-- HU-2: Cell selection, keyboard input 1-6, and deletion support.
-- HU-3: Real-time validation with visual conflict feedback.
-- HU-4: Unlimited hint button with valid suggestion insertion.
+El proyecto esta documentado con comentarios Javadoc en clases y metodos principales del modelo/controlador.
+
+Generar Javadoc:
+
+```bash
+.\mvnw.cmd -DskipTests javadoc:javadoc
+```
+
+Salida:
+
+- target/reports/apidocs/index.html
+
+## Cobertura de historias de usuario
+
+- HU-1: tablero, generacion dinamica, celdas fijas y controles.
+- HU-2: seleccion de celda, entrada 1-6 y borrado.
+- HU-3: validacion en tiempo real con resaltado de conflictos.
+- HU-4: boton de pista ilimitado con insercion valida.
